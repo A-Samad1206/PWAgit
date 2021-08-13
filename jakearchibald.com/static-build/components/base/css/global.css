@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/inconsolata.woff') format('woff');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/pt-serif.woff2') format('woff2');
+}
+
+html {
+  overflow-y: scroll;
+  background: #f1f1f1;
+  font-size: 15px;
+  font-family: sans-serif;
+  line-height: 1.9;
+
+  @media screen and (min-width: $mobile-boundry) {
+    font-size: 16px;
+    color: #444;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+img,
+canvas {
+  max-width: 100%;
+}
+
+p {
+  margin: 1.2em 0;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #cc2100;
+}
+
+a:active,
+a:hover,
+a:focus {
+  color: #ff8f00;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+/* required to keep IE happy */
+svg {
+  overflow: hidden;
+}

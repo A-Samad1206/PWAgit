@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Food Ninja</title>
+    <!-- materialize icons, css & js -->
+    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link type="text/css" href="/css/styles.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <!-- ios support icons -->
+    <link rel="apple-touch-icon" href="/img/icons-96x96.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700" />
+    <meta name="theme-color" content="#000000" />
+  </head>
+  <body class="grey lighten-4">
+    <!-- top nav -->
+    <nav class="z-depth-0">
+      <div class="nav-wrapper container">
+        <a href="/">Food<span>Ninja</span></a>
+        <span class="right grey-text text-darken-1" id="menuIcon">
+          <i class="material-icons sidenav-trigger" data-target="side-menu"
+            >menu</i
+          >
+        </span>
+      </div>
+    </nav>
+
+    <!-- side nav -->
+    <ul id="side-menu" class="sidenav side-menu">
+      <li><a class="subheader">FOODNINJA</a></li>
+      <li><a href="/" class="waves-effect">Home</a></li>
+      <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+      <li><div class="divider"></div></li>
+      <li>
+        <a href="/pages/contact.html" class="waves-effect">
+          <i class="material-icons">mail_outline</i>Contact</a
+        >
+      </li>
+    </ul>
+
+    <!-- recipes -->
+    <!-- recipes -->
+    <div class="recipes container grey-text text-darken-1"></div>
+
+    <div class="center">
+      <a
+        class="btn-floating btn-small btn-large add-btn sidenav-trigger"
+        data-target="side-form"
+      >
+        <i class="material-icons">add</i>
+      </a>
+    </div>
+
+    <!-- add recipe side nav -->
+    <div id="side-form" class="sidenav side-form">
+      <form class="add-recipe container section">
+        <h6>New Recipe</h6>
+        <div class="divider"></div>
+        <div class="input-field">
+          <input
+            placeholder="e.g. Ninja soup"
+            id="title"
+            type="text"
+            class="validate"
+          />
+          <label for="title">Recipe Title</label>
+        </div>
+        <div class="input-field">
+          <input
+            placeholder="e.g. Tofu, mushroom, garlic"
+            id="ingredients"
+            type="text"
+            class="validate"
+          />
+          <label for="ingredients">Ingredients</label>
+        </div>
+        <div class="input-field center">
+          <button class="btn-small">Add</button>
+        </div>
+      </form>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: 'AIzaSyAw41v5HGHokgtdBTKynUp8MlqtkTd3Zw0',
+        authDomain: 'pwap-d001e.firebaseapp.com',
+        projectId: 'pwap-d001e',
+        storageBucket: 'pwap-d001e.appspot.com',
+        messagingSenderId: '788407351254',
+        appId: '1:788407351254:web:e08c86b3a61c7b55339677',
+        measurementId: 'G-SDX8WJH4NK',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      // firebase.analytics();
+      // const deviceCategory = window.navigator.hardwareConcurrency;
+
+      // console.log('deviceCategorydeviceCategory', deviceCategory);
+
+      // const perfData = window.performance;
+      // console.log('perfDataperfDataperfData', perfData);
+    </script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/db.js"></script>
+  </body>
+</html>
